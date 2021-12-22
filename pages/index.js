@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Avatar from "../components/Avatar";
+import { ViewGridIcon, MicrophonIcon } from "@heroicons/react/solid";
 
 export default function Home() {
   return (
@@ -18,9 +19,9 @@ export default function Home() {
         <div className="flex space-x-4 items-center">
           <p className="link">Gmail</p>
           <p className="link">Images</p>
+          <ViewGridIcon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100 cursor-pointer" />
+          <Avatar url="https://earthsky.org/upl/2013/09/sunrise-red-sea-Graham-Telford-e1489764712368.jpg" />
         </div>
-
-        <Avatar url="https://earthsky.org/upl/2013/09/sunrise-red-sea-Graham-Telford-e1489764712368.jpg" />
       </header>
     </div>
   );
