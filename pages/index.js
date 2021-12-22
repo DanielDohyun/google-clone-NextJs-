@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Avatar from "../components/Avatar";
-import { ViewGridIcon, MicrophonIcon } from "@heroicons/react/solid";
+import Image from "next/image";
+import { ViewGridIcon, MicrophoneIcon } from "@heroicons/react/solid";
+import { SearchIcon } from "@heroicons/react/outline";
 
 export default function Home() {
   return (
@@ -23,6 +25,25 @@ export default function Home() {
           <Avatar url="https://earthsky.org/upl/2013/09/sunrise-red-sea-Graham-Telford-e1489764712368.jpg" />
         </div>
       </header>
+
+      <form className="flex flex-col items-center mt-44 flex-grow ">
+        <Image
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
+          width={300}
+          height={100}
+        />
+
+        <div className="flex w-full mt-5 hover:shadow-lg focus-within:shadow-lg max-w-md rounded-full border border-gray-200 px-5 py-3 items-center  sm:max-w-xl lg:max-w-2xl">
+          <SearchIcon className="h-5 mr-3 text-gray-500" />
+          <input type="text" className="focus:outline-none flex-grow" />
+          <MicrophoneIcon className="h-5" />
+        </div>
+
+        <div className="flex flex-col w-1/2 space-y-2 justify-center mt-8 sm:space-y-0 sm:space-x-4 sm:flex-row">
+          <button className="btn">Google Search</button>
+          <button className="btn">I'm Feeling Lucky</button>
+        </div>
+      </form>
     </div>
   );
 }
